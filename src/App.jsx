@@ -1,4 +1,4 @@
-import React from 'react'
+import First from "./components/First.jsx";
 
 const App = () => {
   return (
@@ -7,6 +7,7 @@ const App = () => {
         Hello
       </h1>
       <div>App</div>
+      <First />
     </>
   )
 }
