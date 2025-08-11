@@ -1,10 +1,10 @@
 import { useContext } from "react"
-import {reactcontext} from "../wrapper"
-
+import {reactcontext} from "../wrapper.jsx"
 
 const Second = () => {
-    const one = useContext(reactcontext);
-    console.log(one);
+    const use = useContext(reactcontext);
+    console.log(use)
+
   return (
     <div>second</div>
   )
