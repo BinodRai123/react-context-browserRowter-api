@@ -1,13 +1,17 @@
-import { createContext } from "react"
+import { createContext, useState } from "react"
+import { BrowserRouter } from "react-router-dom";
 
 export const reactcontext = createContext(null);
 
 const Wrapper = (props) => {
+  const [data, setData] = useState([{name: "binod", age: 20}]);
   
   return <>
-    <reactcontext.Provider value={"hello world"}>
-      {props.children}
-    </reactcontext.Provider>
+    <BrowserRouter>
+      <reactcontext.Provider value={[data, setData]}>
+        {props.children}
+      </reactcontext.Provider>
+    </BrowserRouter>
   </>
 
 }

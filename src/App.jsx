@@ -1,13 +1,23 @@
-import First from "./components/First.jsx";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/home.jsx";
+import About from "./pages/about.jsx";
+import Contact from "./pages/contact.jsx";
+import Nav from "./components/nav.jsx";
 
 const App = () => {
   return (
     <>
-      <h1 className="text-3xl font-bold text-red-400 underline">
-        Hello
-      </h1>
-      <div>App</div>
-      <First />
+      <Nav />
+      <nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </nav>
+
+
+      
     </>
   )
 }
