@@ -1,13 +1,17 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
+
+const changeActiveLink = (e) => {
+  return e.isActive ? "text-orange-500 border-b" : ""
+}
 
 const Navbar = () => {
   return (
-    <nav 
-        className="bg-green-600 text-white flex gap-10 px-5 text-2xl"
+    <nav
+        className="py-7 text-white flex justify-center gap-36 text-2xl"
     >
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <NavLink className={changeActiveLink} to="/">Home</NavLink>
+        <NavLink className={changeActiveLink} to="/about">About</NavLink>
+        <NavLink className={changeActiveLink} to="/contact">Contact</NavLink>
     </nav>
   )
 }

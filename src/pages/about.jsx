@@ -1,11 +1,40 @@
-import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
-  return (
-    <div 
-        className='h-[100vh] text-white bg-gray-600 px-5'
-    >About</div>
-  )
-}
+  const buttonColor ="text-2xl self-start p-3 rounded-[0.21em] text-white bg-green-600 cursor-pointer active:scale-95";
+  const navigate = useNavigate();
 
-export default About
+  const changetoProduct = (name) => {
+    navigate(`/about/productdetail`);
+  };
+
+  return (
+    <>
+      <div className="flex flex-col gap-[2.5em] mt-[2em] ">
+        <button
+          onClick={() => changetoProduct("Product 1")}
+          className={buttonColor}
+        >
+          Product 1
+        </button>
+
+        <button
+          onClick={() => changetoProduct("Product 2")}
+          className={buttonColor}
+        >
+          Product 2
+        </button>
+
+        <button
+          onClick={() => changetoProduct("Product 3")}
+          className={buttonColor}
+        >
+          Product 3
+        </button>
+
+      </div>
+    </>
+  );
+};
+
+export default About;
