@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const ProductDetail = () => {
   const navigate = useNavigate();
+  const params = useParams();
 
   const gotoAbout = () => {
     navigate(-1);
@@ -11,7 +12,7 @@ const ProductDetail = () => {
   return (
     <>
       <h1>Details of...</h1>
-      <h1>product</h1>
+      <h1>{params.name}</h1>
 
       <button
         onClick={() => gotoAbout()}

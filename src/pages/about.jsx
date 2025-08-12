@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
 const About = () => {
-  const buttonColor ="text-2xl self-start p-3 rounded-[0.21em] text-white bg-green-600 cursor-pointer active:scale-95";
+  const buttonColor =
+    "text-2xl self-start p-3 rounded-[0.21em] text-white bg-green-600 cursor-pointer active:scale-95";
   const navigate = useNavigate();
 
   const changetoProduct = (name) => {
-    navigate(`/about/productdetail`);
+    navigate(`/about/productdetail/${name}`);
   };
 
   return (
@@ -31,7 +32,7 @@ const About = () => {
         >
           Product 3
         </button>
-
+        
       </div>
     </>
   );
